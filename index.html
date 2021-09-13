@@ -69,6 +69,26 @@
             <td>26</td>
         </tr>
     </table>
+    <br>
+    <hr>
+    <h2>Code fencing</h2>
+
+    <blockquote cite="https://www.wikihow.com/Calculate-the-Area-of-a-Polygon">
+        Calculating the area of a polygon can be as simple as finding the area of a regular triangle or as complicated
+        as finding the area of an irregular eleven-sided shape
+    </blockquote>
+    <div>
+        <pre>double area(const vector<point>& fig) {
+            double res = 0;
+            for (unsigned i = 0; i < fig.size(); i++) {
+                point p = i ? fig[i - 1] : fig.back();
+                point q = fig[i];
+                res += (p.x - q.x) * (p.y + q.y);
+            }
+            return fabs(res) / 2;
+        }</pre>
+        <a href="https://cp-algorithms.com/geometry/area-of-simple-polygon.html">Code source</a>
+    </div>
 
     <a href="aboutme.html">Super hero</a>
 </body>
